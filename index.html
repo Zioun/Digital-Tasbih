@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Tasbih</title>
+    <!-- daisyUi & tailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        .reem-kufi{
+            font-family: "Reem Kufi Fun", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="flex justify-center items-center flex-col h-screen bg-slate-50 relative">
+            <div class="mb-10 bg-slate-100 w-full flex justify-center">
+                <ul class="steps steps-vertical md:steps-horizontal z-10">
+                    <li id="step-one" class="step"><span class="reem-kufi">سبحان الله</span></li>
+                    <li id="step-two" class="step"><span class="reem-kufi">الحمد لله</span></li>
+                    <li id="step-three" class="step"><span class="reem-kufi">الله أكبر</span></li>
+                </ul>
+            </div>
+            <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
+                <div class="stat flex flex-col items-center text-primary">
+                    <div class="stat-title mb-2">Total Progress</div>
+                    <div id="total-progress" class="radial-progress" style="--value:0; --size:4rem; --thickness: 6px;" role="progressbar"><span id="total-progress-text">0%</span></div>
+                </div>
+
+
+                <div class="stat flex flex-col items-center text-secondary">
+                    <div class="stat-title mb-2">Progress</div>
+                    <div id="progress" class="radial-progress" style="--value:0; --size:4rem; --thickness: 6px;" role="progressbar"><span id="progress-text">0%</span></div>
+                </div>
+
+
+                <div class="stat text-primary">
+                  <div class="stat-title">Total Count</div>
+                  <div id="count-total" class="stat-value text-5xl">0</div>
+                </div>
+                
+                <div class="stat text-secondary">
+                  <div class="stat-title">Count</div>
+                  <div id="count" class="stat-value text-5xl">0</div>
+                </div>
+                
+              </div>
+              <div class="mb-5">
+                <button id="count-btn" class="btn btn-circle mt-5 text-secondary border-y-rose-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                  </button>
+              </div>
+              
+        </section>
+        <img id="masaallah-img" class="w-96 left-0 top-0 rotate-[40deg] absolute -ml-[544px]" src="img/masaallah.png" alt="">
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
